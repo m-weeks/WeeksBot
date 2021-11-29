@@ -1,5 +1,6 @@
 const { SlashCommand, CommandOptionType } = require('slash-create');
 const { QueryType } = require('discord-player');
+const playdl = require('play-dl');
 
 module.exports = class extends SlashCommand {
     constructor(creator) {
@@ -39,7 +40,10 @@ module.exports = class extends SlashCommand {
         if (!searchResult || !searchResult.tracks.length) return void ctx.sendFollowUp({ content: 'No results were found!' });
 
         const queue = await client.player.createQueue(guild, {
-            metadata: channel
+            metadata: channel,
+            async onBeforeCreateStream(track, source, _queue) {
+                return (await playdl.stream(track.url)).stream;
+            },
         });
 
         const member = guild.members.cache.get(ctx.user.id) ?? await guild.members.fetch(ctx.user.id);
