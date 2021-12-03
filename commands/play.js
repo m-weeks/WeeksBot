@@ -2,6 +2,14 @@ const { SlashCommand, CommandOptionType } = require('slash-create');
 const { QueryType } = require('discord-player');
 const playdl = require('play-dl');
 
+if (process.env.YOUTUBE_COOKIE) {
+    playdl.setToken({
+        youtube: {
+            cookie: process.env.YOUTUBE_COOKIE,
+        },
+    });
+}
+
 module.exports = class extends SlashCommand {
     constructor(creator) {
         super(creator, {
