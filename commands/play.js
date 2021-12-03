@@ -47,7 +47,6 @@ module.exports = class extends SlashCommand {
                 }
                 if (track.source === "spotify"){
                     var result = await playdl.spotify(track.url);
-                    console.log(result);
                     return (result);
                 }
             },
