@@ -42,12 +42,17 @@ module.exports = class extends SlashCommand {
         const queue = await client.player.createQueue(guild, {
             metadata: channel,
             async onBeforeCreateStream(track, source, _queue) {
-                if (track.source === "youtube") {
-                    return (await playdl.stream(track.url)).stream;
-                }
-                if (track.source === "spotify"){
-                    var result = await playdl.spotify(track.url);
-                    return (result);
+                try {
+                    if (track.source === "youtube") {
+                        return (await playdl.stream(track.url)).stream;
+                    }
+                    if (track.source === "spotify"){
+                        const ytResult = await playdl.search(`${track.author} ${track.title}`, { limit : 1, source : { youtube : "video" } })
+                        return (await playdl.stream(ytResult[0].url)).stream;
+                    }
+                } catch (e) {
+                    console.error(e);
+                    throw e;
                 }
             },
         });
