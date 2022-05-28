@@ -17,7 +17,7 @@
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
     "numeral": "^2.0.6",
-    "play-dl": "^1.9.0",
+    "play-dl": "github:k2helix/play-dl-compiled",
     "slash-create": "^4.0.1"
   },
   "devDependencies": {
