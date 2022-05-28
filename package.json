@@ -13,10 +13,11 @@
     "@discord-player/downloader": "^3.0.1",
     "@discord-player/extractor": "^3.0.2",
     "@discordjs/opus": "^0.6.0",
-    "discord-player": "^5.2.0",
-    "play-dl": "^1.4.0",
+    "discord-player": "^5.2.2",
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
+    "numeral": "^2.0.6",
+    "play-dl": "^1.9.0",
     "slash-create": "^4.0.1"
   },
   "devDependencies": {

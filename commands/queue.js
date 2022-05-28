@@ -1,4 +1,5 @@
 const { SlashCommand, CommandOptionType} = require('slash-create');
+var numeral = require('numeral');
 
 const PAGE_SIZE = 10;
 
@@ -48,6 +49,7 @@ module.exports = class extends SlashCommand {
                     color: 0xff0000,
                     fields: [
                         { name: 'Page', value: `${curPage} / ${totalPages}` },
+                        { name: 'Estimated Length', value: `${numeral((queue.totalTime) / 1000).format('00:00:00')}` },
                         { name: 'Now Playing', value: `🎶 | **${currentTrack.title}** ([link](${currentTrack.url}))` }
                     ]
                 }
