@@ -1873,12 +1873,11 @@
   "resolved" "https://registry.npmjs.org/play-audio/-/play-audio-0.5.2.tgz"
   "version" "0.5.2"
 
-"play-dl@^1.9.4", "play-dl@github:k2helix/play-dl-compiled":
-  "resolved" "git+ssh://git@github.com/k2helix/play-dl-compiled.git#a48b1ed679abfdbf3ccd0fb884ee8b01326f0e57"
+"play-dl@github:k2helix/play-dl-compiled":
+  "resolved" "git+ssh://git@github.com/k2helix/play-dl-compiled.git#8d318ac486344fdcda09c48d948c8150b41599a2"
   "version" "1.9.4"
   dependencies:
     "play-audio" "^0.5.2"
-    "play-dl" "^1.9.4"
 
 "prelude-ls@^1.2.1":
   "integrity" "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g=="
