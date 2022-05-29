@@ -28,8 +28,6 @@ docker run -d --env-file .env weeks-bot
 |   **/stop**   |          Stop the player           |           |
 |  **/volume**  |          Set music volume          | \<amount> |# Weeks Bot
 
-The music bot for Chads
-
 ## Installation
 
 ### Docker 
