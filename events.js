@@ -3,10 +3,8 @@ module.exports.registerManagerEvents = (client) => {
   .on("nodeConnect", node => console.log(`Node ${node.options.identifier} connected`))
   .on("nodeError", (node, error) => console.log(`Node ${node.options.identifier} had an error: ${error.message}`))
   .on("nodeDestroy", (node) => {
-    if (client.manager.nodes.size === 0) {
-      console.log('No nodes left, shutting down...');
-      client.destroy();
-    }
+    console.log('No nodes left, shutting down...');
+    client.destroy();
   })
   .on("trackStart", (player, track) => {
     client.channels.cache
