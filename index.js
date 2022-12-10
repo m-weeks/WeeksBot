@@ -21,6 +21,7 @@ client.manager = new Manager({
       host: process.env.LAVALINK_SERVER_ADDRESS,
       port: parseInt(process.env.LAVALINK_SERVER_PORT),
       password: process.env.LAVALINK_SERVER_PASSWORD,
+      secure: Boolean(process.env.LAVALINK_SECURE),
     },
   ],
   send(id, payload) {

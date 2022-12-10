@@ -1,7 +1,5 @@
 # Weeks Bot
 
-The music bot for Chads
-
 ## Installation
 
 ### Docker 
