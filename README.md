@@ -1,5 +1,7 @@
 # Weeks Bot
 
+Discord music bot with slashcommands. Requires a lavalink server to play audio
+
 ## Installation
 
 ### Docker 
